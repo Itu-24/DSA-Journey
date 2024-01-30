@@ -1,0 +1,79 @@
+
+class Solution
+{
+    void insertattail(Node *&tail,Node *&head,int d){
+        Node*temp=new Node(d);
+        if(tail==NULL){
+            tail=temp;
+            head=temp;
+        }
+        else{
+            tail->next=temp;
+            tail=temp;
+            
+        }
+    }
+    public:
+    Node *copyList(Node *head)
+    {
+        //Write your code here
+        // Create a simple clone with random pointer = NULL 
+        Node*Mynodehead=NULL;
+        Node*Mynodetail=NULL;
+        
+        Node*temp=head;
+       
+        while(temp!=NULL){
+            insertattail(Mynodetail,Mynodehead,temp->data);
+            temp=temp->next;
+        }
+       
+    //   link original list and clone list by putting clone list in the middle
+    
+     temp=head;
+     Node*curr=Mynodehead;
+     
+     while(temp!=NULL){
+         
+         Node*store=temp->next;
+         temp->next=curr;
+         temp=store;
+         
+         store=curr->next;
+         curr->next=temp;
+         curr=store;
+     }
+    //  link random pointer 
+     temp=head;
+     while(temp!=NULL){
+         if(temp->arb!=NULL){
+             
+         temp->next->arb=temp->arb->next;
+         }else{
+             temp->next->arb=NULL;
+         }
+         temp=temp->next->next;
+         
+     }
+     
+    //  reverse the step 2
+    temp=head;
+    curr=temp->next;
+    while(temp!=NULL){
+        temp->next=curr->next;
+        temp=temp->next;
+           if(curr->next!=NULL){
+               curr->next=temp->next;
+            }
+        curr=curr->next;
+    }
+            return Mynodehead;
+            
+    }
+        
+        
+        
+        
+    
+
+};
