@@ -48,24 +48,7 @@ class Solution{
         
     }
     
-    vector<int> makearray(int M[MAX][MAX], int n, int m ,int h){
-        vector<int>ans(m);
-        
-        for(int i=0;i<m;i++){
-             
-             ans[i]=0;
-             int s=0;
-         
-             while(s!=h){
-                 ans[i]+=M[s][i];
-                 s++;
-                 
-             }
-        }
-        return ans;
-        
-    }
-    
+   
   public:
     int maxArea(int M[MAX][MAX], int n, int m) {
         // Your code here
