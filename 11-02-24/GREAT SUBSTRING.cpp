@@ -1,5 +1,7 @@
-
- long long count(string S, int s, int e)
+// QUES = num of substring in which number of 1 is greater that L/2 (L is size of subsiting ) string contain 1 ans 0 only
+class Solution
+{
+    long long count(string S, int s, int e)
     {
         long long cnt = 0;
         for (int i = s; i <= e; i++)
@@ -80,3 +82,4 @@ public:
         return ans;
         // return z;
     }
+};
