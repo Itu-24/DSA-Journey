@@ -1,5 +1,7 @@
 // QUES =https://www.codingninjas.com/studio/problems/check-if-the-string-is-a-palindrome_1062633?utm_source=youtube&utm_medium=affiliate&utm_campaign=love_babbar_5&leftPanelTabValue=PROBLEM
 
+
+// TIME COMPLEXITY - O(N) ; SPACE COMPLEXITY=O(1)
 #include <bits/stdc++.h>
 bool validchar(char a) {
   if ('0' <= a && a <= '9') {
@@ -49,6 +51,8 @@ bool checkPalindrome(string s) {
 }
 
 //                                                                             2nd approach 
+
+// TIME COMPLEXITY - O(N) ; SPACE COMPLEXITY=O(n)
 
 #include <bits/stdc++.h> 
 bool ispalindrome(string str){
